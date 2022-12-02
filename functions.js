@@ -1,45 +1,10 @@
-/*===============================================
-*
-* Template name : Arty
-* Version       : 2.2.7
-* Author        : FlaTheme
-* Author URL    : http://themeforest.net/user/flatheme
-*
-* Table of Contents : 
-* 1.  Page Preloaders
-* 2.  Scroll Animations
-* 3.  SmoothScroll
-* 4.  Scroll to Top
-* 5.  Header Menu
-* 6.  Fullscreen Menu
-* 7.  Sidebar Menu
-* 8.  Sidebar Toggle Menu
-* 9.  Parallax
-* 10. Background Image
-* 11. Slider
-* 12. Portfolio Masonry
-* 13. Portfolio Metro
-* 14. Portfolio Grid
-* 15. Justified Gallery
-* 16. Masonry
-* 17. Lightbox
-* 18. Accordion
-* 19. Counter
-* 20. Countdown
-* 21. Google Maps
-* 22. Contact Form
-* 23. Shop
-*
-===============================================*/
 "use strict";
 
 var htmlBody = $("html,body");
 var body = $("body");
 var windowWidth = $(window).width();
 
-/*===============================================
-  1. Page Preloaders
-===============================================*/
+
 $(window).on("load", function () {
   body.addClass("loaded");
 });
@@ -58,17 +23,13 @@ else if (body.attr("data-preloader") === "4") {
 }
 
 
-/*===============================================
-  2. Scroll Animations
-===============================================*/
+
 sal({
   duration: 500
 });
 
 
-/*===============================================
-  3. SmoothScroll
-===============================================*/
+
 $('a[href*="#"]').not('[href="#"]').not('[data-toggle="tab"]').on("click", function(e) {
   if (
     location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
@@ -85,9 +46,7 @@ $('a[href*="#"]').not('[href="#"]').not('[data-toggle="tab"]').on("click", funct
 });
 
 
-/*===============================================
-  4. Scroll to Top
-===============================================*/
+
 var scrollTopBtn = $(".scrolltotop");
 
 if (scrollTopBtn.length) {
@@ -113,9 +72,6 @@ if (scrollTopBtn.length) {
 }
 
 
-/*===============================================
-  5. Header Menu
-===============================================*/
 //
 // Fixed //
 //
@@ -269,9 +225,6 @@ $(".m-dropdown-link").each(function() {
 });
 
 
-/*===============================================
-  6. Fullscreen Menu
-===============================================*/
 var fmToggle = $(".fm-toggle");
 var fmClose = $(".fm-close");
 var fmWrapper = $(".fm-wrapper");
@@ -285,9 +238,6 @@ fmClose.on("click", function() {
 });
 
 
-/*===============================================
-  7. Sidebar Menu
-===============================================*/
 var smToggle = $(".sm-toggle");
 var smClose = $(".sm-close");
 var smWrapper = $(".sm-wrapper");
@@ -367,9 +317,6 @@ $(".sm-dropdown-link").each(function() {
 });
 
 
-/*===============================================
-  8. Sidebar Toggle Menu
-===============================================*/
 var stmToggle = $(".stm-toggle");
 var stmToggleWrapper = $(".stm-toggle-wrapper");
 var stmClose = $(".stm-close");
@@ -463,9 +410,6 @@ $(".stm-dropdown-link").each(function() {
 });
 
 
-/*===============================================
-  9. Parallax Background
-===============================================*/
 if (windowWidth > 1200) {
   var parallaxBg = $(".parallax-bg");
 
@@ -479,18 +423,12 @@ if (windowWidth > 1200) {
 }
 
 
-/*===============================================
-  10. Background Image
-===============================================*/
 $(".bg-image").each(function() {
   var bgData = $(this).attr("data-bg-src");
   $(this).css('background-image', 'url("' + bgData + '")');
 });
 
 
-/*===============================================
-  11. Slider
-===============================================*/
 $(".owl-carousel").each(function() {
   var $carousel = $(this);
 
@@ -566,9 +504,6 @@ $(".owl-carousel").each(function() {
 });
 
 
-/*===============================================
-  12. Portfolio Masonry
-===============================================*/
 var portfolioMasonry = $(".portfolio-masonry");
 
 if (portfolioMasonry.length) {
@@ -592,9 +527,6 @@ if (portfolioMasonry.length) {
 }
 
 
-/*===============================================
-  13. Portfolio Metro
-===============================================*/
 var portfolioMetro = $(".portfolio-metro");
 
 if (portfolioMetro.length) {
@@ -606,9 +538,6 @@ if (portfolioMetro.length) {
 }
 
 
-/*===============================================
-  14. Portfolio Grid
-===============================================*/
 var portfolioGrid = $(".portfolio-grid");
 
 if (portfolioGrid.length) {
@@ -623,9 +552,6 @@ if (portfolioGrid.length) {
 }
 
 
-/*===============================================
-  15. Justified Gallery
-===============================================*/
 var justifiedGallery = $(".justified-gallery");
 
 if (justifiedGallery.length) {
@@ -650,9 +576,6 @@ if (justifiedGallery.length) {
 }
 
 
-/*===============================================
-  16. Masonry
-===============================================*/
 var $masonryGrid = $(".masonry").imagesLoaded( function() {
   $masonryGrid.masonry({
     itemSelector: '.masonry-item', 
@@ -662,9 +585,6 @@ var $masonryGrid = $(".masonry").imagesLoaded( function() {
 });
 
 
-/*===============================================
-  17. Lightbox
-===============================================*/
 //
 // Lightbox - Image //
 //
@@ -732,9 +652,6 @@ if ($gallery.length) {
 }
 
 
-/*===============================================
-  18. Accordion
-===============================================*/
 $(".accordion-title").each(function() {
 
   var $this = $(this);
@@ -771,9 +688,6 @@ $(".accordion-title").each(function() {
 });
 
 
-/*===============================================
-  19. Counter
-===============================================*/
 var counter = $(".counter");
 
 if (counter.length) {
@@ -794,9 +708,6 @@ if (counter.length) {
 }
 
 
-/*===============================================
-  20. Countdown
-===============================================*/
 var countdown = $(".countdown");
 
 if (countdown.length) {
@@ -810,9 +721,6 @@ if (countdown.length) {
 }
 
 
-/*===============================================
-  21. Google Maps
-===============================================*/
 var mapCanvas = $(".gmap");
 var m,divId,initLatitude, initLongitude, map;
 
@@ -843,9 +751,6 @@ if (mapCanvas.length) {
 }
 
 
-/*===============================================
-  22. Contact Form
-===============================================*/
 $("#contactform").on("submit", function(e) {
   var name = $("#name").val();
   var email = $("#email").val();
@@ -888,9 +793,6 @@ $("#contactform").on("submit", function(e) {
 });
 
 
-/*===============================================
-  23. Shop
-===============================================*/  
 $(".product-quantity .qnt").append('<a class="dec qnt-button" href="#">-</a><a class="inc qnt-button" href="#">+</a>');
 
 $(".qnt-button").on("click", function(e) {
